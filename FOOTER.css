@@ -1,0 +1,105 @@
+/*++++++++++++++++++++++++++ WATSSAPPPPP+++++++++++++++++++++++++++++++++ */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+.whatsapp-icon {
+    position: fixed; /* Fija la posición del icono */
+    bottom: 35px; /* Distancia desde la parte inferior de la pantalla */
+    right: 70px; /* Distancia desde el borde derecho de la pantalla */
+    z-index: 1000; /* Asegura que el icono esté por encima del contenido */
+    animation: bounce 2s infinite; /* Aplica la animación de rebote */
+}
+
+.whatsapp-icon img {
+    width: 60px; /* Ajusta el tamaño del icono */
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transición suave para opacidad, sombra y transformación */
+    border-radius: 50%;
+}
+
+.whatsapp-icon img:hover {
+    opacity: 0.8; /* Cambia la opacidad al pasar el cursor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al icono */
+    animation: none; /* Detiene la animación de rebote al pasar el cursor */
+    transform: scale(2); /* Aumenta la escala del icono al pasar el cursor */
+}
+
+@media screen and (max-width: 768px) {
+    .whatsapp {
+            display: block; /* Muestra el botón de WhatsApp en pantallas móviles */
+            bottom: 25px; /* Ajusta la distancia desde la parte inferior de la pantalla */
+        }
+    .whatsapp-icon img {
+        width: 80px; /* Ajusta el tamaño del icono para pantallas más pequeñas */
+    }
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++PIE DE PAGINA++++++++++++++++++++++++++++++++++++++++++++++++*/
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    justify-content:center
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Alineado vertical */ 
+    margin-left: 80PX;
+    margin-right: 20PX;
+    }
+
+.footer-content ul{
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 16px;
+}
+
+.contactosredes {
+    width: 80%;
+    display: flex;
+    justify-content: space-between; /* Distribuye uniformemente los elementos a lo largo del ancho */
+    margin-bottom: 0px; /* Espacio entre contactosredes y creditos */ 
+}
+.contactosredes > div {
+    justify-content: space-between; /* Distribuye uniformemente los elementos a lo largo del ancho */
+    margin: 0 1px; /* Espacio entre elementos de contactosredes */
+}
+
+.creditos {
+    margin-top: 2px; /* Espacio entre contactosredes y creditos */
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 800px) {
+    .footer {
+        width: 70%;
+        flex-direction: column; /* Alineado vertical */
+        padding: 5px 0; /* Reduce el padding en pantallas pequeñas */
+    }
+    .footer-content {
+        flex-direction: column; /* Alineado vertical */
+        font-size: 14px; /* Reduce el tamaño de texto en pantallas pequeñas */
+        margin-left: -80PX;
+        margin-right: -20PX;
+    }
+    .footer-content ul{
+        text-align: center; /* Alinea el texto a la izquierda */
+    }
+    .contactosredes {
+        width: 100%;
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Alinea los elementos al centro en pantallas pequeñas */
+    }
+    .contactosredes > div {
+        margin: 5px 0; /* Reduce el espacio entre elementos en pantallas pequeñas */
+    }
+    .creditos {
+        font-size: 12px; /* Reduce el tamaño de texto de los créditos en pantallas pequeñas */
+    }
+}
